@@ -96,18 +96,10 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "Clang" OR
         add_definitions(-msse2)
         add_definitions(-DUSE_SSE2)
     endif()
-    if(USE_SIMD MATCHES AVX)
-        add_definitions(-march=native)
-        add_definitions(-DUSE_AVX)
-    endif()
 elseif(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
     if(USE_SIMD MATCHES SSE2)
         add_definitions(/arch:SSE2)
         add_definitions(-DUSE_SSE2)
-    endif()
-    if(USE_SIMD MATCHES AVX)
-        add_definitions(/arch:AVX)
-        add_definitions(-DUSE_AVX)
     endif()
     # boost feels like using lib pragmas to link to libs,
     # but the boost libs might not even be in the (default) lib search path
