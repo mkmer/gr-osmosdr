@@ -42,10 +42,10 @@ properly installed. The build system of gr-osmosdr will recognize them and
 enable specific source/sink components thereafter.
 
 Please note: prior pulling a new version from git and compiling it,
-please do a "make uninstall" first to properly remove the previous version.
+please do a `make uninstall` first to properly remove the previous version.
 
 Building with cmake:
-
+```
 git clone https://gitea.osmocom.org/sdr/gr-osmosdr
 cd gr-osmosdr/
 mkdir build
@@ -54,9 +54,17 @@ cmake ../
 make
 sudo make install
 sudo ldconfig
+```
 
-NOTE: The osmocom blocks will appear under 'Sources' and 'Sinks' categories
+NOTE: The osmocom blocks will appear under *Sources* and *Sinks* categories
 in GRC menu.
+
+Forum
+-----
+
+We welcome any gr-osmosdr related discussions in the
+[SDR](https://discourse.osmocom.org/c/sdr/)
+section of the osmocom discourse (web based Forum).
 
 Mailing List
 ------------
